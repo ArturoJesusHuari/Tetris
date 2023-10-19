@@ -31,11 +31,11 @@ body{
     }
 
     #text-score, #controls {
-        width: 100%;
+        width: 80%;
     }
 
     #canvas {
-        width: 100%;
+        width: 80%;
     }
 }
 
