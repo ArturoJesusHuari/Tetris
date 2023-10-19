@@ -24,3 +24,24 @@ body{
 #controls{
     width: 30%;
 }
+/* Estilos generales para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    #display {
+        flex-direction: column;
+    }
+
+    #text-score, #controls {
+        width: 100%;
+    }
+
+    #canvas {
+        width: 100%;
+    }
+}
+
+/* Estilos específicos para pantallas pequeñas, como teléfonos */
+@media screen and (max-width: 480px) {
+    #text-score, #controls {
+        font-size: 1rem;
+    }
+}
