@@ -1,4 +1,4 @@
 function play(){
-    var url = "../../server/Tetriz.html";
+    var url = "./Tetriz.html";
     window.open(url, "_self");
 }

@@ -4,6 +4,6 @@ var parameterText = urlParams.get("parametro");
 console.log("Parámetro recibido: " + parameterText);
 document.getElementById("score").innerHTML ='SCORE: '+parameterText;
 function tryAgain(){
-    var url = "../../server/Tetriz.html";
+    var url = "./Tetriz.html";
     window.open(url, "_self");
 }
