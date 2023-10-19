@@ -1,0 +1,27 @@
+body{
+    background-color: #212121;
+}
+#audioDefault{
+    display: none;
+}
+#display{
+    display: flex;
+}
+#text-score{
+    display: flex;
+    color: white;
+    font-family: "Courier New", monospace;
+    font-size: 1.5rem;
+    width: 30%;
+    justify-content: right;
+}
+#canvas{
+    background-color: #212121;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    border: 1px solid white;
+}
+#controls{
+    width: 30%;
+}

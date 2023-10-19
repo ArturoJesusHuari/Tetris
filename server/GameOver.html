@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../src/resource/css/styleGameOver.css">
+    <title>Tetris</title>
+</head>
+<body>
+    <div id="displayGameOver">
+        <svg viewBox="0 0 1320 300">
+        <symbol id="s-text">
+            <text text-anchor="middle"
+                x="50%" y="50%" dy=".35em">
+            GAME OVER
+            </text>
+        </symbol>
+        <use xlink:href="#s-text" class="text"></use>
+        <use xlink:href="#s-text" class="text"></use>
+        <use xlink:href="#s-text" class="text"></use>
+        <use xlink:href="#s-text" class="text"></use>
+        <use xlink:href="#s-text" class="text"></use>
+        </svg>
+    </div>
+    <h1 id="score">SCORE: </h1>
+    <script src="../src/components/GameOver.js"></script>
+    <div id="containerButton">
+        <button type="button" onclick=tryAgain()>Try again</button>
+    </div>
+</body>
+</html>

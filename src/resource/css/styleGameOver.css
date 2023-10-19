@@ -1,0 +1,107 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
+.text {
+    fill: none;
+    stroke-width: 6;
+    stroke-linejoin: round;
+    stroke-dasharray: 70 330;
+    stroke-dashoffset: 0;
+    -webkit-animation: stroke 6s infinite linear;
+    animation: stroke 6s infinite linear;
+}
+.text:nth-child(5n + 1) {
+    stroke: #EF9A9A;
+    -webkit-animation-delay: -1.2s;
+    animation-delay: -1.2s;
+}
+.text:nth-child(5n + 2) {
+    stroke: #D1C4E9;
+    -webkit-animation-delay: -2.4s;
+    animation-delay: -2.4s;
+}
+.text:nth-child(5n + 3) {
+    stroke: #BBDEFB;
+    -webkit-animation-delay: -3.6s;
+    animation-delay: -3.6s;
+}
+.text:nth-child(5n + 4) {
+    stroke: #A5D6A7;
+    -webkit-animation-delay: -4.8s;
+    animation-delay: -4.8s;
+}
+.text:nth-child(5n + 5) {
+    stroke: #E6EE9C;
+    -webkit-animation-delay: -6s;
+    animation-delay: -6s;
+}
+@-webkit-keyframes stroke {
+    100% {
+        stroke-dashoffset: -400;
+    }
+}
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: -400;
+    }
+}
+html, body {
+    background: #212121;
+    height: 90%;
+}
+#displayGameOver {
+    background: #212121;
+    background-size: 1.5em;
+    font: 10em/1 Open Sans, Impact;
+    text-transform: uppercase;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    height: 60%;
+}
+h1{
+    color: white;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: "Courier New", monospace;
+    height: 30%;
+}
+#containerButton{
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+button{
+    background:#C5E1A5;
+    color:#212121 ;
+    border:none;
+    position:relative;
+    height:auto;
+    font-size:1.5rem;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+    padding: 1% 2%;
+}
+button:hover{
+    background:#212121 ;
+    color:#C5E1A5;
+}
+button:before,button:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:5px;
+    width:0;
+    background: #C5E1A5;
+    transition:400ms ease all;
+}
+button:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+}
+button:hover:before,button:hover:after{
+    width:100%;
+    transition:800ms ease all;
+}
