@@ -1,4 +1,4 @@
 function play(){
-    var url = "./Tetriz.html";
+    var url = "./Tetris.html";
     window.open(url, "_self");
 }

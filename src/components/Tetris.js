@@ -73,7 +73,7 @@ export class Tetris{
         }
     }
     gameOver(parameterText){
-        var url = "../../server/GameOver.html?parametro=" + encodeURIComponent(parameterText);
+        var url = "./GameOver.html?parametro=" + encodeURIComponent(parameterText);
         window.open(url, "_self");
     }
 }
