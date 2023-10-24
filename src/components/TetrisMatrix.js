@@ -30,6 +30,9 @@ export class TetrisMatrix{
         }
         return true;
     }
+    isFullRows(){
+        return this.matrix.some(row => row.every(cell => cell === 1));
+    }
     destroyFullRows(){
         const rowsToRemove = [];
         let score = 0;
@@ -65,7 +68,7 @@ export class TetrisMatrix{
     }
     drawLittleSquare(row,column,colour){
         this.context.fillStyle = colour;
-        this.context.fillRect(row*30+1, column*30+1, 28, 28);
+        this.context.fillRect(row*(30)+1, column*(30)+1, 28, 28);
     }
     draw(){
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);

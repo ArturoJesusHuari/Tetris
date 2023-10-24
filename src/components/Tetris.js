@@ -1,9 +1,12 @@
 import {I,O,Z,W,L} from './Shape.js';
 import {TetrisMatrix} from './TetrisMatrix.js';
+const moveSound = document.getElementById("shapeMoveSound");
+const destruction = document.getElementById("destruction");
+const drop = document.getElementById("drop");
 export class Tetris{
     constructor(){
         this.tetrizMatrix = new TetrisMatrix();
-        this.score = 0;
+        this.score = 1000;
         this.velocity = 1000;
         this.shape = this.generateShape();
     }
@@ -15,7 +18,6 @@ export class Tetris{
         }
     }
     getVelocity(){
-        console.log(this.velocity);
         return this.velocity;}
     generateShape(){
         var shape;
@@ -45,26 +47,37 @@ export class Tetris{
     moveShapeInX(displacementX){
         if (this.tetrizMatrix.validationPosition(this.shape, this.shape.moveThroughX(displacementX))) {
             this.moveShape(this.shape,this.shape.moveThroughX(displacementX));
+            moveSound.play()
         }
     }
     dropFastShape(){
-        while(this.tetrizMatrix.validationPosition(this.shape,this.shape.fall())){
-            this.moveShape(this.shape,this.shape.fall());
-        }
+        const fallDelay = 30;
+        const fallStep = () => {
+            if (this.tetrizMatrix.validationPosition(this.shape, this.shape.fall())) {
+                this.moveShape(this.shape, this.shape.fall());
+                setTimeout(fallStep, fallDelay);
+                drop.play();
+            }
+        };
+        fallStep();
     }
     roundShape(){
         if (this.tetrizMatrix.validationPosition(this.shape, this.shape.round())){
             this.moveShape(this.shape,this.shape.round());
+            moveSound.play()
         }
     }
     run(){
         this.tetrizMatrix.draw();
         if(this.tetrizMatrix.validationPosition(this.shape,this.shape.fall())){
             this.moveShape(this.shape,this.shape.fall());
+            moveSound.play()
         }else{
-            this.score += this.tetrizMatrix.destroyFullRows()*100;
-            document.getElementById("score").innerHTML = this.score;
-            this.setVelocity();
+            if(this.tetrizMatrix.isFullRows()){
+                this.score += this.tetrizMatrix.destroyFullRows()*100;
+                document.getElementById("score").innerHTML = this.score;
+                this.setVelocity();
+                destruction.play()}
             if(!this.tetrizMatrix.getIsGameOver()){
                 this.shape = this.generateShape();
             }else{

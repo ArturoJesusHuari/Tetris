@@ -1,20 +1,34 @@
 import { Tetris } from './Tetris.js';
-var t = new Tetris();
+var tetris = new Tetris();
+function dropFastShape(){tetris.dropFastShape();}
+function roundShape(){tetris.roundShape(1);}
+function moveShapeRight(){tetris.moveShapeInX(1);}
+function moveShapeLeft(){tetris.moveShapeInX(-1);}
+
 document.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowLeft'){
-        t.moveShapeInX(-1);
+        moveShapeLeft();
     }else if (event.key === 'ArrowRight') {
-        t.moveShapeInX(1);
+        moveShapeRight();
     }else if (event.key === 'ArrowUp') {
-        t.roundShape(1);
+        roundShape();
     }else if (event.key === 'ArrowDown') {
-        t.dropFastShape();
+        dropFastShape();
     }
 });
 function timeout() {
     setTimeout(function (){
-        t.run();
+        tetris.run();
         timeout();
-    }, t.getVelocity());
+    }, tetris.getVelocity());
 };
 timeout();
+
+const drop = document.getElementById("dropShape");
+const right = document.getElementById("rightShape");
+const left = document.getElementById("leftShape");
+const round = document.getElementById("roundShape");
+round.addEventListener("click", roundShape);
+left.addEventListener("click", moveShapeLeft);
+right.addEventListener("click", moveShapeRight);
+drop.addEventListener("click", dropFastShape);

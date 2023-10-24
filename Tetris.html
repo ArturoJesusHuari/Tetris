@@ -7,11 +7,19 @@
     <title>Tetris</title>
 </head>
 <body>
+    <audio id="shapeMoveSound" src="./src/resource/sounds/move.mp3"></audio>
+    <audio id="destruction" src="./src/resource/sounds/destruction.mp3"></audio>
+    <audio id="drop" src="./src/resource/sounds/drop.mp3"></audio>
+    <script type="module" src="./src/components/app.js"></script>
     <div id="display">
         <div id="text-score"><p>SCORE: </p><p id="score">0</p></div>
         <canvas id="canvas" width="300" height="600"></canvas>
-        <div id="controls"></div>
+        <div id="controls">
+            <button class="buttonControl" id="roundShape"><img src="src\resource\images\round.png"></button><br>
+            <button class="buttonControl" id="leftShape"><img src="src\resource\images\left.png"></button>
+            <button class="buttonControl" id="rightShape"><img src="src\resource\images\right.png"></button><br>
+            <button class="buttonControl" id="dropShape"><img src="src\resource\images\drop.png"></button>
+        </div>
     </div>
-    <script type="module" src="./src/components/app.js"></script>
 </body>
 </html>
