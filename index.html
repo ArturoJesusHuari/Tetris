@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="src\resource\icons\icon.ico">
     <meta charset="UTF-8">
     <title>Tetris Game</title>
     <link rel="stylesheet" type="text/css" href="./src/resource/css/styleIndex.css">
@@ -8,7 +10,21 @@
 <body>
     <div id="container">
         <script src="./src/components/Index.js"></script>
-        <h1 id="title">Tetris</h1>
+        <div id="displayTetrisTitle">
+            <svg viewBox="0 0 1320 300">
+            <symbol id="s-text">
+                <text text-anchor="middle"
+                    x="50%" y="50%" dy=".35em">
+                TETRIS
+                </text>
+            </symbol>
+            <use xlink:href="#s-text" class="text"></use>
+            <use xlink:href="#s-text" class="text"></use>
+            <use xlink:href="#s-text" class="text"></use>
+            <use xlink:href="#s-text" class="text"></use>
+            <use xlink:href="#s-text" class="text"></use>
+            </svg>
+        </div>
         <button type="button" onclick=play()>Play</button>
     </div>
 </body>

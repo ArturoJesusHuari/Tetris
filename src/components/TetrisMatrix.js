@@ -6,6 +6,7 @@ export class TetrisMatrix{
         this.context = this.canvas.getContext('2d');
         this.fullRow = Array(10).fill(1);
         this.emptyRow = Array(10).fill(0);
+        this.emptyRowColour = Array(10).fill('0');
     }
     getMatrix(){return this.matrix;}
     getLimits(coordinates){
@@ -13,7 +14,7 @@ export class TetrisMatrix{
         || coordinates[1] == -1
         || coordinates[1] == this.matrix[0].length
     }
-    getIsGameOver(){
+    getIsFirstRowFull(){
         return this.matrix[4].some(element => element === 1);
     }
     validationPosition(shape, newCoordinates){
@@ -34,6 +35,7 @@ export class TetrisMatrix{
         return this.matrix.some(row => row.every(cell => cell === 1));
     }
     destroyFullRows(){
+        this.drawDestruction();
         const rowsToRemove = [];
         let score = 0;
         for (let row = 0; row < this.matrix.length; row++) {
@@ -44,6 +46,8 @@ export class TetrisMatrix{
         rowsToRemove.forEach(row => {
             this.matrix.splice(row, 1);
             this.matrix.unshift([...this.emptyRow]);
+            this.matrixColour.splice(row, 1);
+            this.matrixColour.unshift([...this.emptyRowColour]);
             score++;
         });
         if(score==1){
@@ -69,6 +73,22 @@ export class TetrisMatrix{
     drawLittleSquare(row,column,colour){
         this.context.fillStyle = colour;
         this.context.fillRect(row*(30)+1, column*(30)+1, 28, 28);
+    }
+    drawDestruction(){
+        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        for (let row = 4; row < this.matrix.length; row++) {
+            if(this.matrix[row].every(element => element === 1)){
+                for (let column = 0; column < this.matrix[0].length; column++) {
+                    this.drawLittleSquare(column, row-4,'#424242');
+                }
+            }else{
+                for (let column = 0; column < this.matrix[0].length; column++) {
+                    if(this.matrix[row][column] == 1){
+                        this.drawLittleSquare(column, row-4,this.matrixColour[row][column]);
+                    }
+                }
+            }
+        }
     }
     draw(){
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);

@@ -24,8 +24,10 @@ body{
 #controls{
     width: 30%;
     text-align: center;
+    margin-top: 30%;
+    margin-left: 1%;
 }
 .buttonControl{
-    top: 50%;
     background-color: #212121;
+    border: 0px;
 }

@@ -53,7 +53,7 @@ export class Tetris{
     dropFastShape(){
         const fallDelay = 30;
         const fallStep = () => {
-            if (this.tetrizMatrix.validationPosition(this.shape, this.shape.fall())) {
+            if (this.shape.getFloor() >= 4 && this.tetrizMatrix.validationPosition(this.shape, this.shape.fall())) {
                 this.moveShape(this.shape, this.shape.fall());
                 setTimeout(fallStep, fallDelay);
                 drop.play();
@@ -78,7 +78,7 @@ export class Tetris{
                 document.getElementById("score").innerHTML = this.score;
                 this.setVelocity();
                 destruction.play()}
-            if(!this.tetrizMatrix.getIsGameOver()){
+            if(!this.tetrizMatrix.getIsFirstRowFull()){
                 this.shape = this.generateShape();
             }else{
                 this.gameOver(JSON.stringify(this.score));

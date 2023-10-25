@@ -9,6 +9,10 @@ export class Shape {
     getCoordinatesBefore() {return this.coordinatesBefore;}
     getCoordinates(){return this.coordinatesNow;}
     getColour(){return this.colour}
+    getFloor(){
+        let floor =[this.coordinatesNow[0][0],this.coordinatesNow[1][0],this.coordinatesNow[2][0],this.coordinatesNow[3][0]];
+        return Math.max(...floor);
+    }
     setCoodinatesBefore(){
         for (let index = 0; index < 4; index++) {
             this.coordinatesBefore[index]=[this.coordinatesNow[index][0],this.coordinatesNow[index][1]];
