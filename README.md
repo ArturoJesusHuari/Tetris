@@ -2,7 +2,8 @@
 
 This is a Tetris project created with JavaScript, HTML, and CSS that adapts to various screen sizes to provide a responsive gaming experience. Below, you'll find information on how to run and test this game, as well as details about how it works.
 
-<video width="100%" height="240" controls src="/assets/dem.mp4">
+<video width="100%" height="240" controls>
+    <source src="/assets/dem.mp4" type="video/mp4">
 </video>
 
 ## Description
