@@ -20,9 +20,9 @@ This project is an implementation of the classic Tetris game using standard web 
 
 ## Technologies Used
 <div>
-    <img height="20%" src="./assets/html.png"/>
-    <img height="20%" src="./assets/css.png"/>
-    <img height="20%" src="./assets/js.png"/>
+    <img width="20%" height="20%" src="./assets/html.png"/>
+    <img width="20%" height="20%" src="./assets/css.png"/>
+    <img width="20%" height="18%" src="./assets/js.png"/>
 </div>
 
 ## How to Play
