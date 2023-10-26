@@ -19,11 +19,11 @@ This project is an implementation of the classic Tetris game using standard web 
 - Scoring system to keep track of your performance.
 
 ## Technologies Used
-
-![html](https://github.com/ArturoJesusHuari/Tetris.github.io/assets/115654291/82e57764-f99c-4d29-8498-c545c1593279){height=200}
-![css](https://github.com/ArturoJesusHuari/Tetris.github.io/assets/115654291/d6a7b532-a69f-4066-b913-30d3f1e030eb){height=200}
-![js](https://github.com/ArturoJesusHuari/Tetris.github.io/assets/115654291/0f2bb75a-58cd-40e5-ab7a-9d959b3fbf92){height=200}
-
+<div>
+    <img width="20%" height="20%" src="https://raw.githubusercontent.com/ArturoJesusHuari/Tetris.github.io/assets/115654291/82e57764-f99c-4d29-8498-c545c1593279"/>
+    <img width="20%" height="20%" src="https://raw.githubusercontent.com/ArturoJesusHuari/Tetris.github.io/assets/115654291/d6a7b532-a69f-4066-b913-30d3f1e030eb"/>
+    <img width="20%" height="20%" src="https://raw.githubusercontent.com/ArturoJesusHuari/Tetris.github.io/assets/115654291/0f2bb75a-58cd-40e5-ab7a-9d959b3fbf92"/>
+</div>
 ## How to Play
 
 1. Open the `index.html` file in your web browser.
