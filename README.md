@@ -2,9 +2,11 @@
 
 This is a Tetris project created with JavaScript, HTML, and CSS that adapts to various screen sizes to provide a responsive gaming experience. Below, you'll find information on how to run and test this game, as well as details about how it works.
 
-<video width="100%" height="240" controls>
-    <source src="/assets/dem.mp4" type="video/mp4">
-</video>
+
+
+https://github.com/ArturoJesusHuari/Tetris.github.io/assets/115654291/c38fff52-e703-4a2f-b275-8915977b3c86
+
+
 
 ## Description
 
@@ -17,11 +19,9 @@ This project is an implementation of the classic Tetris game using standard web 
 - Scoring system to keep track of your performance.
 
 ## Technologies Used
-<div>
-    <img width="20%" height="20%" src="/assets/html.png"/>
-    <img width="20%" height="20%" src="/assets/css.png"/>
-    <img width="20%" height="20%" src="/assets/js.png"/>
-</div>
+![html](https://github.com/ArturoJesusHuari/Tetris.github.io/assets/115654291/82e57764-f99c-4d29-8498-c545c1593279)
+![css](https://github.com/ArturoJesusHuari/Tetris.github.io/assets/115654291/d6a7b532-a69f-4066-b913-30d3f1e030eb)
+![js](https://github.com/ArturoJesusHuari/Tetris.github.io/assets/115654291/0f2bb75a-58cd-40e5-ab7a-9d959b3fbf92)
 
 ## How to Play
 
