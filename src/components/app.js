@@ -23,9 +23,9 @@ function timeout() {
     }, tetris.getVelocity());
 };
 function resize(){
-    const pageHeight = document.documentElement.scrollHeight;
+    /*const pageHeight = document.documentElement.scrollHeight;
     document.getElementById("canvas").style.width = pageHeight*45/100 + 'px';
-    document.getElementById("canvas").style.height = pageHeight*9/10 + 'px';
+    document.getElementById("canvas").style.height = pageHeight*9/10 + 'px';*/
 }
 timeout();
 const drop = document.getElementById("dropShape");
