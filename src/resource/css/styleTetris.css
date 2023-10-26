@@ -31,7 +31,10 @@ body{
 @media (max-width: 768px) {
     #display{
         display: inline;
-        text-align: center;
+    }
+    #text-score{
+        margin-left: auto;
+        margin-right: auto;
     }
     #canvas{
         display: flex;
